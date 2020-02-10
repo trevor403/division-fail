@@ -1,17 +1,5 @@
 package main
 
-import (
-	"strconv"
-	// "strings"
-	// "reflect"
-	// "fmt"
-)
-
-var (
-	remainder uint32 = 0
-	divisor   uint32 = 0
-)
-
 func main() {
 	display.Configure()
 
@@ -27,8 +15,8 @@ func main() {
 	printString("                             |", 9)
 
 	// loop past 100 to pass fastSmalls
-	for num := uint64(0); ; num++ {
-		numString := strconv.FormatUint(uint64(num), 10)
+	for num := uint32(0); ; num++ {
+		numString := FixedFormatUint(num)
 		printString("num "+numString, 9)
 	}
 
